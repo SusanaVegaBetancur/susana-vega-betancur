@@ -21,7 +21,7 @@
       <a href="cv.html" class="nav-link">CV</a>
       <a href="research.html" class="nav-link active">Research</a>
       <a href="publications.html" class="nav-link">Publications</a>
-      <a href="fieldwork.html" class="nav-link">Fieldwork</a>
+      <a href="field-work.html" class="nav-link">Fieldwork</a>
       <a href="disclosure.html" class="nav-link">Disclosure</a>
     </nav>
   </div>
@@ -30,18 +30,41 @@
 <section class="profile-section">
   <img src="images/research1.jpg" class="profile-photo">
   <div class="profile-text">
-    <h2>Neotropical Selaginella</h2>
-    <p>During my undergraduate and master's degrees, I studied the taxonomy, morphology, and nomenclature of this plant genus. Now, for my PhD, I want to answer questions from an evolutionary perspective: What are the relationships? How has the growth habit evolved in this clade?</p>
+    <h2 data-lang="en">Neotropical Selaginella</h2>
+    <h2 data-lang="es" style="display:none;">Selaginella Neotropical</h2>
+    <p data-lang="en">
+      During my undergraduate and master's degrees, I studied the taxonomy, morphology, and nomenclature of this plant genus. 
+      Now, for my PhD, I want to answer questions from an evolutionary perspective: What are the relationships?, how has the growth habit evolved in this clade?
+    </p>
+    <p data-lang="es" style="display:none;">
+      Durante mi pregrado y maestría, estudié la taxonomía, morfología y nomenclatura de este género de plantas. 
+      Ahora, para mi doctorado, quiero responder preguntas desde una perspectiva evolutiva: ¿Cuáles son las relaciones?, ¿cómo ha evolucionado el hábito de crecimiento en este clado?
+    </p>
   </div>
 </section>
 
 <section class="profile-section">
   <img src="images/research2.jpg" class="profile-photo">
   <div class="profile-text">
-    <h2>Spore Ornamentation</h2>
-    <p>How has spore ornamentation evolved in some Selaginella clades?</p>
+    <h2 data-lang="en">Spore Ornamentation</h2>
+    <h2 data-lang="es" style="display:none;">Ornamentación de esporas</h2>
+    <p data-lang="en">
+      How has spore ornamentation evolved in some Selaginella clades?
+    </p>
+    <p data-lang="es" style="display:none;">
+      ¿Cómo ha evolucionado la ornamentación de esporas en algunos clados de Selaginella?
+    </p>
   </div>
 </section>
+
+<script>
+function setLanguage(lang) {
+  const elements = document.querySelectorAll('[data-lang]');
+  elements.forEach(el => {
+    el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+  });
+}
+</script>
 
 </body>
 </html>
