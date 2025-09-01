@@ -7,80 +7,41 @@
 </head>
 <body>
 
-<!-- Language buttons -->
 <div class="lang-buttons">
   <button onclick="setLanguage('en')">English</button>
   <button onclick="setLanguage('es')">Español</button>
 </div>
 
-<!-- Header -->
 <header class="header">
   <img src="images/main_image.jpg" alt="Main Image" class="main-image">
   <div class="overlay">
     <h1>SUSANA VEGA BETANCUR</h1>
     <nav class="navbar">
-      <a href="home.html" id="nav-home">Home</a>
-      <a href="cv.html" id="nav-cv">CV</a>
-      <a href="research.html" id="nav-research" class="active">Research</a>
-      <a href="publications.html" id="nav-publications">Publications</a>
-      <a href="fieldwork.html" id="nav-fieldwork">Fieldwork</a>
-      <a href="disclosure.html" id="nav-disclosure">Disclosure</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cv.html" class="nav-link">CV</a>
+      <a href="research.html" class="nav-link active">Research</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="fieldwork.html" class="nav-link">Fieldwork</a>
+      <a href="disclosure.html" class="nav-link">Disclosure</a>
     </nav>
   </div>
 </header>
 
-<!-- Research content -->
-<section class="publication">
-  <img src="images/research1.jpg" alt="Neotropical Selaginella" class="publication-photo">
-  <div class="publication-text">
-    <h2 id="pub1-title"></h2>
-    <p id="pub1-text"></p>
+<section class="profile-section">
+  <img src="images/research1.jpg" class="profile-photo">
+  <div class="profile-text">
+    <h2>Neotropical Selaginella</h2>
+    <p>During my undergraduate and master's degrees, I studied the taxonomy, morphology, and nomenclature of this plant genus. Now, for my PhD, I want to answer questions from an evolutionary perspective: What are the relationships? How has the growth habit evolved in this clade?</p>
   </div>
 </section>
 
-<section class="publication">
-  <img src="images/research2.jpg" alt="Spore Ornamentation" class="publication-photo">
-  <div class="publication-text">
-    <h2 id="pub2-title"></h2>
-    <p id="pub2-text"></p>
+<section class="profile-section">
+  <img src="images/research2.jpg" class="profile-photo">
+  <div class="profile-text">
+    <h2>Spore Ornamentation</h2>
+    <p>How has spore ornamentation evolved in some Selaginella clades?</p>
   </div>
 </section>
-
-<script>
-  const content = {
-    en: {
-      nav: ["Home", "CV", "Research", "Publications", "Fieldwork", "Disclosure"],
-      pub1Title: "Neotropical Selaginella",
-      pub1Text: `During my undergraduate and master's degrees, I studied the taxonomy, morphology, and nomenclature of this plant genus.
-Now, for my PhD, I want to answer questions from an evolutionary perspective: What are the relationships?, how has the growth habit evolved in this clade?`,
-      pub2Title: "Spore Ornamentation",
-      pub2Text: "How has spore ornamentation evolved in some Selaginella clades?"
-    },
-    es: {
-      nav: ["Inicio", "CV", "Investigación", "Publicaciones", "Trabajo de campo", "Divulgación"],
-      pub1Title: "Selaginella Neotropical",
-      pub1Text: `Durante mi pregrado y maestría estudié la taxonomía, morfología y nomenclatura de este género de plantas.
-Ahora, para mi doctorado, quiero responder preguntas desde una perspectiva evolutiva: ¿Cuáles son las relaciones?, ¿cómo ha evolucionado el hábito de crecimiento en este clado?`,
-      pub2Title: "Ornamentación de esporas",
-      pub2Text: "¿Cómo ha evolucionado la ornamentación de esporas en algunos clados de Selaginella?"
-    }
-  };
-
-  function setLanguage(lang) {
-    const navIds = ["nav-home", "nav-cv", "nav-research", "nav-publications", "nav-fieldwork", "nav-disclosure"];
-    navIds.forEach((id, index) => {
-      document.getElementById(id).textContent = content[lang].nav[index];
-    });
-
-    document.getElementById("pub1-title").textContent = content[lang].pub1Title;
-    document.getElementById("pub1-text").textContent = content[lang].pub1Text;
-    document.getElementById("pub2-title").textContent = content[lang].pub2Title;
-    document.getElementById("pub2-text").textContent = content[lang].pub2Text;
-  }
-
-  // Default language
-  setLanguage('en');
-</script>
 
 </body>
 </html>
