@@ -1,60 +1,107 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Susana Vega Betancur - Field Work</title>
+  <title>Fieldwork - Susana Vega Betancur</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Susana Vega Betancur</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="field-work.html">Field Work</a></li>
-        <li><a href="disclosure.html">Disclosure</a></li>
-      </ul>
+
+<!-- Language buttons -->
+<div class="lang-buttons">
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('es')">Español</button>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <img src="images/main_image.jpg" alt="Main Image" class="main-image">
+  <div class="overlay">
+    <h1>SUSANA VEGA BETANCUR</h1>
+    <nav class="navbar">
+      <a href="home.html" id="nav-home">Home</a>
+      <a href="cv.html" id="nav-cv">CV</a>
+      <a href="research.html" id="nav-research">Research</a>
+      <a href="publications.html" id="nav-publications">Publications</a>
+      <a href="fieldwork.html" id="nav-fieldwork" class="active">Fieldwork</a>
+      <a href="disclosure.html" id="nav-disclosure">Disclosure</a>
     </nav>
-    <div style="margin-top:10px;">
-      <button onclick="changeLang('es')">Español</button>
-      <button onclick="changeLang('en')">English</button>
-    </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section id="fieldwork">
-      <h2 class="es">Trabajo de campo</h2>
-      <h2 class="en" style="display:none;">Field Work</h2>
-      <p class="es">Durante mis salidas de campo, he documentado distintas especies y ecosistemas.</p>
-      <p class="en" style="display:none;">During my field trips, I have documented various species and ecosystems.</p>
-      <div class="field-images">
-        <img src="images/tropical_forest.jpg" alt="Bosque tropical" class="field-img">
-        <img src="images/paramos.jpg" alt="Páramos" class="field-img">
-        <img src="images/andean_forest.jpg" alt="Bosque andino" class="field-img">
-      </div>
-    </section>
-  </main>
+<!-- Fieldwork content -->
+<section class="publication">
+  <img src="images/tropical_forest.jpg" alt="Tropical Forest" class="publication-photo">
+  <div class="publication-text">
+    <h2 id="fw1-title"></h2>
+    <p id="fw1-text"></p>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Susana Vega Betancur</p>
-  </footer>
+<section class="publication">
+  <img src="images/paramos.jpg" alt="Paramos" class="publication-photo">
+  <div class="publication-text">
+    <h2 id="fw2-title"></h2>
+    <p id="fw2-text"></p>
+  </div>
+</section>
 
-  <script>
-    function changeLang(lang) {
-      const esElements = document.querySelectorAll('.es');
-      const enElements = document.querySelectorAll('.en');
-      if(lang === 'es'){
-        esElements.forEach(el => el.style.display = '');
-        enElements.forEach(el => el.style.display = 'none');
-      } else {
-        esElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = '';
-      }
+<section class="publication">
+  <img src="images/andean_forest.jpg" alt="Andean Rainforest" class="publication-photo">
+  <div class="publication-text">
+    <h2 id="fw3-title"></h2>
+    <p id="fw3-text"></p>
+  </div>
+</section>
+
+<script>
+  const content = {
+    en: {
+      nav: ["Home", "CV", "Research", "Publications", "Fieldwork", "Disclosure"],
+      fw1Title: "Tropical Forest",
+      fw1Text: `Warm and humid biomes near the equator, characterized by abundant rainfall throughout the year and incredible biodiversity.
+
+Some collection locations: Amazon rain forest and western slope of the western mountain range in Colombia.`,
+      fw2Title: "Paramos",
+      fw2Text: `Mountain ecosystems located in high tropical zones, between the forest line and the perpetual snow (generally between 3,000 and 5,000 meters above sea level), with a cold and humid climate, and vegetation adapted to these extreme conditions, such as frailejones.
+
+Some collection locations: central coordillera in Colombia.`,
+      fw3Title: "Andean rainforest",
+      fw3Text: `The "high Andean rainforest," or more precisely, the high Andean cloud forest, is a mountain ecosystem located on the eastern flank of the Andes, characterized by dense, rainy, and cloudy conditions. It is found between 600 and 3,500 meters above sea level and is distinguished by its abundant flora and fauna, including tall trees, orchids, and animals like the spectacled bear.
+
+Some collection locations: western and east cordilleras in Colombia.`
+    },
+    es: {
+      nav: ["Inicio", "CV", "Investigación", "Publicaciones", "Trabajo de campo", "Divulgación"],
+      fw1Title: "Bosque Tropical",
+      fw1Text: `Biomas cálidos y húmedos cerca del ecuador, caracterizados por abundantes lluvias durante todo el año y una increíble biodiversidad.
+
+Algunas localidades de recolección: selva amazónica y ladera occidental de la cordillera occidental en Colombia.`,
+      fw2Title: "Páramos",
+      fw2Text: `Ecosistemas de montaña ubicados en zonas altas tropicales, entre la línea del bosque y la nieve perpetua (generalmente entre 3.000 y 5.000 metros sobre el nivel del mar), con clima frío y húmedo, y vegetación adaptada a estas condiciones extremas, como los frailejones.
+
+Algunas localidades de recolección: cordillera central en Colombia.`,
+      fw3Title: "Bosque Andino",
+      fw3Text: `El "bosque altoandino", o más precisamente, el bosque nublado altoandino, es un ecosistema de montaña ubicado en la vertiente oriental de los Andes, caracterizado por condiciones densas, lluviosas y nubladas. Se encuentra entre 600 y 3.500 metros sobre el nivel del mar y se distingue por su abundante flora y fauna, incluyendo árboles altos, orquídeas y animales como el oso de anteojos.
+
+Algunas localidades de recolección: cordilleras occidental y oriental en Colombia.`
     }
-  </script>
+  };
+
+  function setLanguage(lang) {
+    const navIds = ["nav-home", "nav-cv", "nav-research", "nav-publications", "nav-fieldwork", "nav-disclosure"];
+    navIds.forEach((id,index)=> document.getElementById(id).textContent = content[lang].nav[index]);
+
+    document.getElementById("fw1-title").textContent = content[lang].fw1Title;
+    document.getElementById("fw1-text").textContent = content[lang].fw1Text;
+    document.getElementById("fw2-title").textContent = content[lang].fw2Title;
+    document.getElementById("fw2-text").textContent = content[lang].fw2Text;
+    document.getElementById("fw3-title").textContent = content[lang].fw3Title;
+    document.getElementById("fw3-text").textContent = content[lang].fw3Text;
+  }
+
+  setLanguage('en');
+</script>
+
 </body>
 </html>
