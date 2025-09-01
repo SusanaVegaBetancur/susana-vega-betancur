@@ -1,1 +1,88 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-color: #004d00;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+button.lang-btn {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Secciones */
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #004d00;
+  margin-bottom: 10px;
+}
+
+.field-img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #004d00;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Para el video y logo */
+.video-item iframe {
+  max-width: 100%;
+}
+
+.logo-item img {
+  max-width: 300px;
+  display: block;
+  margin-top: 10px;
+}
 
