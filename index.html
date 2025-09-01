@@ -13,72 +13,49 @@
   <button onclick="setLanguage('es')">Español</button>
 </div>
 
-<!-- Header with main image -->
+<!-- Header -->
 <header class="header">
   <img src="images/main_image.jpg" alt="Main Image" class="main-image">
   <div class="overlay">
     <h1>SUSANA VEGA BETANCUR</h1>
     <nav class="navbar">
-      <a href="#" class="active" id="nav-home">Home</a>
-      <a href="#" id="nav-cv">CV</a>
-      <a href="#" id="nav-research">Research</a>
-      <a href="#" id="nav-publications">Publications</a>
-      <a href="#" id="nav-fieldwork">Fieldwork</a>
-      <a href="#" id="nav-disclosure">Disclosure</a>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="cv.html" class="nav-link">CV</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="fieldwork.html" class="nav-link">Fieldwork</a>
+      <a href="disclosure.html" class="nav-link">Disclosure</a>
     </nav>
   </div>
 </header>
 
-<!-- About me section -->
-<section class="about">
+<!-- Profile section -->
+<section class="profile-section">
   <img src="images/profile_photo.jpg" alt="Profile Photo" class="profile-photo">
-  <div class="about-text">
+  <div class="profile-text">
     <h2 id="about-title"></h2>
     <p id="about-text"></p>
   </div>
 </section>
 
 <script>
-  // Text content for both languages
-  const content = {
-    en: {
-      aboutTitle: "About me",
-      aboutText: `Grew up in a rural area of Medellin, Colombia surrounded by tropical forest and mountains. 
-      My early experiences in the biodiversity of Colombia helped hone my passion for plants and fieldwork. 
-      I worked for four years as a research assistant for the NSF funded Ferns of Colombia project traveling 
-      all over the country collecting rare and new species. I have also studied the taxonomy, morphology, 
-      and nomenclature of Neotropical Selaginella species for more than 8 years. For my PhD, I plan to 
-      continue studying Selaginella but from an evolutionary perspective. When I'm not studying Selaginella 
-      I like to swim, be outside, travel, and drink coffee.`,
-      nav: ["Home", "CV", "Research", "Publications", "Fieldwork", "Disclosure"]
-    },
-    es: {
-      aboutTitle: "Sobre mí",
-      aboutText: `Crecí en una zona rural de Medellín, Colombia, rodeada de bosque tropical y montañas. 
-      Mis primeras experiencias en la biodiversidad de Colombia ayudaron a fortalecer mi pasión 
-      por las plantas y el trabajo de campo. Trabajé durante cuatro años como asistente de 
-      investigación en el proyecto financiado por la NSF Ferns of Colombia, viajando por todo 
-      el país para recolectar especies raras y nuevas. También he estudiado la taxonomía, morfología 
-      y nomenclatura de las especies neotropicales de Selaginella por más de ocho años. Para mi doctorado 
-      planeo continuar estudiando Selaginella pero desde una perspectiva evolutiva. Cuando no estoy 
-      estudiando Selaginella, me gusta nadar, estar al aire libre, viajar y tomar café.`,
-      nav: ["Inicio", "CV", "Investigación", "Publicaciones", "Trabajo de campo", "Divulgación"]
-    }
-  };
-
-  function setLanguage(lang) {
-    document.getElementById("about-title").textContent = content[lang].aboutTitle;
-    document.getElementById("about-text").textContent = content[lang].aboutText;
-
-    // Update navbar text
-    const navIds = ["nav-home", "nav-cv", "nav-research", "nav-publications", "nav-fieldwork", "nav-disclosure"];
-    navIds.forEach((id, index) => {
-      document.getElementById(id).textContent = content[lang].nav[index];
-    });
+const content = {
+  en: {
+    aboutTitle: "About me",
+    aboutText: `Grew up in a rural area of Medellin, Colombia surrounded by tropical forest and mountains. My early experiences in the biodiversity of Colombia helped hone my passion for plants and fieldwork. I worked for four years as a research assistant for the NSF funded Ferns of Colombia project traveling all over the country collecting rare and new species. I have also studied the taxonomy, morphology, and nomenclature of Neotropical Selaginella species for more than 8 years. For my PhD, I plan to continue studying Selaginella but from an evolutionary perspective. When I'm not studying Selaginella I like to swim, be outside, travel, and drink coffee.`
+  },
+  es: {
+    aboutTitle: "Sobre mí",
+    aboutText: `Crecí en una zona rural de Medellín, Colombia, rodeada de bosque tropical y montañas. Mis primeras experiencias con la biodiversidad de Colombia ayudaron a cultivar mi pasión por las plantas y el trabajo de campo. Trabajé durante cuatro años como asistente de investigación en el proyecto Ferns of Colombia financiado por la NSF, viajando por todo el país recolectando especies raras y nuevas. También he estudiado la taxonomía, morfología y nomenclatura de especies neotropicales de Selaginella durante más de 8 años. Para mi doctorado, planeo continuar estudiando Selaginella desde una perspectiva evolutiva. Cuando no estudio Selaginella me gusta nadar, estar al aire libre, viajar y tomar café.`
   }
+};
 
-  // Default language
-  setLanguage('en');
+function setLanguage(lang){
+  document.getElementById("about-title").textContent = content[lang].aboutTitle;
+  document.getElementById("about-text").textContent = content[lang].aboutText;
+}
+
+setLanguage('en');
 </script>
 
 </body>
