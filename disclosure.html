@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Susana Vega Betancur - Disclosure</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Susana Vega Betancur</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="field-work.html">Field Work</a></li>
+        <li><a href="disclosure.html">Disclosure</a></li>
+      </ul>
+    </nav>
+    <div style="margin-top:10px;">
+      <button class="lang-btn" onclick="changeLang('es')">Español</button>
+      <button class="lang-btn" onclick="changeLang('en')">English</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="disclosure">
+      <h2 class="es">Disclosure</h2>
+      <h2 class="en" style="display:none;">Disclosure</h2>
+
+      <!-- Primer item: Video -->
+      <div class="video-item" style="margin-bottom:40px;">
+        <h3 class="es">Video de presentación</h3>
+        <h3 class="en" style="display:none;">Presentation Video</h3>
+        <p class="es">Este video forma parte de la serie "Two Minute Genera" y presenta una visión general sobre el género <em>Osmundastrum</em> (familia Osmundaceae), destacando su diversidad y características principales.</p>
+        <p class="en" style="display:none;">This video is part of the "Two Minute Genera" series and provides an overview of the genus <em>Osmundastrum</em> (Osmundaceae family), highlighting its diversity and main characteristics.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/o4aXpEBdVQA" 
+          title="Two Minute Genera: Osmundastrum (Osmundaceae)" frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Segundo item: Logo -->
+      <div class="logo-item" style="margin-top:20px;">
+        <h3 class="es">Logo de la organización</h3>
+        <h3 class="en" style="display:none;">Organization Logo</h3>
+        <p class="es">Este logo representa a la organización con la que se realizaron las actividades de divulgación.</p>
+        <p class="en" style="display:none;">This logo represents the organization involved in the outreach activities.</p>
+        <img src="images/outreach2.jpg" alt="Logo" class="field-img">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Susana Vega Betancur</p>
+  </footer>
+
+  <script>
+    function changeLang(lang) {
+      const esElements = document.querySelectorAll('.es');
+      const enElements = document.querySelectorAll('.en');
+      if(lang === 'es'){
+        esElements.forEach(el => el.style.display = '');
+        enElements.forEach(el => el.style.display = 'none');
+      } else {
+        esElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = '');
+      }
+    }
+  </script>
+</body>
+</html>
