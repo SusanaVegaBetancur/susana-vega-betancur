@@ -21,7 +21,7 @@
       <a href="cv.html" class="nav-link">CV</a>
       <a href="research.html" class="nav-link">Research</a>
       <a href="publications.html" class="nav-link">Publications</a>
-      <a href="fieldwork.html" class="nav-link active">Fieldwork</a>
+      <a href="field-work.html" class="nav-link active">Fieldwork</a>
       <a href="disclosure.html" class="nav-link">Disclosure</a>
     </nav>
   </div>
@@ -30,26 +30,59 @@
 <section class="profile-section">
   <img src="images/tropical_forest.jpg" class="profile-photo">
   <div class="profile-text">
-    <h2>Tropical Forest</h2>
-    <p>Warm and humid biomes near the equator, characterized by abundant rainfall throughout the year and incredible biodiversity.<br><br>Some collection locations: Amazon rain forest and western slope of the western mountain range in Colombia.</p>
+    <h2 data-lang="en">Tropical Forest</h2>
+    <h2 data-lang="es" style="display:none;">Bosque Tropical</h2>
+    <p data-lang="en">
+      Warm and humid biomes near the equator, characterized by abundant rainfall throughout the year and incredible biodiversity.<br>
+      Some collection locations: Amazon rain forest and western slope of the western mountain range in Colombia
+    </p>
+    <p data-lang="es" style="display:none;">
+      Biomas cálidos y húmedos cerca del ecuador, caracterizados por abundantes precipitaciones durante todo el año y biodiversidad increíble.<br>
+      Algunas localidades de colección: selva amazónica y ladera occidental de la cordillera occidental en Colombia
+    </p>
   </div>
 </section>
 
 <section class="profile-section">
   <img src="images/paramos.jpg" class="profile-photo">
   <div class="profile-text">
-    <h2>Paramos</h2>
-    <p>Mountain ecosystems located in high tropical zones, between the forest line and the perpetual snow, with a cold and humid climate, and vegetation adapted to these extreme conditions, such as frailejones.<br><br>Some collection locations: central cordillera in Colombia.</p>
+    <h2 data-lang="en">Paramos</h2>
+    <h2 data-lang="es" style="display:none;">Páramos</h2>
+    <p data-lang="en">
+      Mountain ecosystems located in high tropical zones, between the forest line and the perpetual snow (generally between 3,000 and 5,000 meters above sea level), with a cold and humid climate, and vegetation adapted to these extreme conditions, such as frailejones.<br>
+      Some collection locations: central cordillera in Colombia
+    </p>
+    <p data-lang="es" style="display:none;">
+      Ecosistemas de montaña ubicados en zonas altas tropicales, entre la línea de bosque y la nieve perpetua (generalmente entre 3,000 y 5,000 metros sobre el nivel del mar), con clima frío y húmedo, y vegetación adaptada a estas condiciones extremas, como frailejones.<br>
+      Algunas localidades de colección: cordillera central en Colombia
+    </p>
   </div>
 </section>
 
 <section class="profile-section">
   <img src="images/andean_forest.jpg" class="profile-photo">
   <div class="profile-text">
-    <h2>Andean Rainforest</h2>
-    <p>The "high Andean rainforest," or more precisely, the high Andean cloud forest, is a mountain ecosystem located on the eastern flank of the Andes, characterized by dense, rainy, and cloudy conditions. It is found between 600 and 3,500 meters above sea level and is distinguished by its abundant flora and fauna, including tall trees, orchids, and animals like the spectacled bear.<br><br>Some collection locations: western and east cordilleras in Colombia.</p>
+    <h2 data-lang="en">Andean Rainforest</h2>
+    <h2 data-lang="es" style="display:none;">Bosque Andino</h2>
+    <p data-lang="en">
+      The "high Andean rainforest," or more precisely, the high Andean cloud forest, is a mountain ecosystem located on the eastern flank of the Andes, characterized by dense, rainy, and cloudy conditions. It is found between 600 and 3,500 meters above sea level and is distinguished by its abundant flora and fauna, including tall trees, orchids, and animals like the spectacled bear.<br>
+      Some collection locations: western and east cordilleras in Colombia
+    </p>
+    <p data-lang="es" style="display:none;">
+      El "bosque altoandino", o más precisamente, el bosque nuboso altoandino, es un ecosistema montañoso ubicado en la ladera oriental de los Andes, caracterizado por condiciones densas, lluviosas y nubladas. Se encuentra entre 600 y 3,500 metros sobre el nivel del mar y se distingue por su abundante flora y fauna, incluidos árboles altos, orquídeas y animales como el oso andino.<br>
+      Algunas localidades de colección: cordilleras occidental y oriental en Colombia
+    </p>
   </div>
 </section>
+
+<script>
+function setLanguage(lang) {
+  const elements = document.querySelectorAll('[data-lang]');
+  elements.forEach(el => {
+    el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+  });
+}
+</script>
 
 </body>
 </html>
