@@ -21,23 +21,41 @@
       <a href="cv.html" class="nav-link">CV</a>
       <a href="research.html" class="nav-link">Research</a>
       <a href="publications.html" class="nav-link active">Publications</a>
-      <a href="fieldwork.html" class="nav-link">Fieldwork</a>
+      <a href="field-work.html" class="nav-link">Fieldwork</a>
       <a href="disclosure.html" class="nav-link">Disclosure</a>
     </nav>
   </div>
 </header>
 
-<div class="publications">
-  <h2>Publications:</h2>
-  <ul>
-    <li>
-      Vega-Betancur, S., R. Callejas, W. Testo & A. Vasco. 2023. Sinopsis de Selaginella (Selaginellaceae) para Antioquia, Colombia. Brittonia. <a href="https://doi.org/10.1007/s12228-023-09744-0">https://doi.org/10.1007/s12228-023-09744-0</a>
-    </li>
-    <li>
-      Valdespino, I., Vega-Betancur S., C. López & J. Ceballos. 2024. Selaginella antioquensis (Selaginellaceae), a remarkable new species from Antioquia, Colombia. Brittonia. <a href="https://doi.org/10.1007/s12228-024-09813-y">https://doi.org/10.1007/s12228-024-09813-y</a>
-    </li>
-  </ul>
-</div>
+<section class="profile-section">
+  <div class="publication-text">
+    <h2 data-lang="en">Publications</h2>
+    <h2 data-lang="es" style="display:none;">Publicaciones</h2>
+
+    <p data-lang="en">
+      Vega-Betancur, S., R. Callejas, W. Testo & A. Vasco. 2023. Sinopsis de Selaginella (Selaginellaceae) para Antioquia, Colombia. Brittonia. 
+      <a href="https://doi.org/10.1007/s12228-023-09744-0" target="_blank">Link</a><br><br>
+      Valdespino, I., Vega-Betancur S., C. López & J. Ceballos. 2024. Selaginella antioquensis (Selaginellaceae), a remarkable new species from Antioquia, Colombia. Brittonia. 
+      <a href="https://doi.org/10.1007/s12228-024-09813-y" target="_blank">Link</a>
+    </p>
+
+    <p data-lang="es" style="display:none;">
+      Vega-Betancur, S., R. Callejas, W. Testo & A. Vasco. 2023. Sinopsis de Selaginella (Selaginellaceae) para Antioquia, Colombia. Brittonia. 
+      <a href="https://doi.org/10.1007/s12228-023-09744-0" target="_blank">Enlace</a><br><br>
+      Valdespino, I., Vega-Betancur S., C. López & J. Ceballos. 2024. Selaginella antioquensis (Selaginellaceae), a remarkable new species from Antioquia, Colombia. Brittonia. 
+      <a href="https://doi.org/10.1007/s12228-024-09813-y" target="_blank">Enlace</a>
+    </p>
+  </div>
+</section>
+
+<script>
+function setLanguage(lang) {
+  const elements = document.querySelectorAll('[data-lang]');
+  elements.forEach(el => {
+    el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+  });
+}
+</script>
 
 </body>
 </html>
