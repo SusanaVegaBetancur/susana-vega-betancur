@@ -7,103 +7,43 @@
 </head>
 <body>
 
-<!-- Language buttons -->
 <div class="lang-buttons">
   <button onclick="setLanguage('en')">English</button>
   <button onclick="setLanguage('es')">Español</button>
 </div>
 
-<!-- Header -->
 <header class="header">
   <img src="images/main_image.jpg" alt="Main Image" class="main-image">
   <div class="overlay">
     <h1>SUSANA VEGA BETANCUR</h1>
     <nav class="navbar">
-      <a href="home.html" id="nav-home">Home</a>
-      <a href="cv.html" id="nav-cv">CV</a>
-      <a href="research.html" id="nav-research">Research</a>
-      <a href="publications.html" id="nav-publications">Publications</a>
-      <a href="fieldwork.html" id="nav-fieldwork">Fieldwork</a>
-      <a href="disclosure.html" id="nav-disclosure" class="active">Disclosure</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cv.html" class="nav-link">CV</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="fieldwork.html" class="nav-link">Fieldwork</a>
+      <a href="disclosure.html" class="nav-link active">Disclosure</a>
     </nav>
   </div>
 </header>
 
-<!-- Disclosure content -->
-
-<section class="publication">
+<section class="profile-section">
   <div class="publication-left">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/o4aXpEBdVQA" title="2MG YouTube Series" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/o4aXpEBdVQA" frameborder="0" allowfullscreen></iframe>
   </div>
   <div class="publication-text">
-    <h2 id="dis1-title"></h2>
-    <p id="dis1-text"></p>
+    <h2>2MG YouTube Series</h2>
+    <p>The 2 Minute Genera project...</p>
   </div>
 </section>
 
-<section class="publication">
-  <img src="images/outreach2.jpg" alt="Fiddlehead Forum" class="publication-photo">
-  <div class="publication-text">
-    <h2 id="dis2-title"></h2>
-    <p id="dis2-text"></p>
+<section class="profile-section">
+  <img src="images/outreach2.jpg" class="profile-photo">
+  <div class="profile-text">
+    <h2>Fiddlehead Forum</h2>
+    <p>The Fiddlehead Forum is the newsletter...</p>
   </div>
 </section>
-
-<script>
-const content = {
-  en: {
-    nav: ["Home", "CV", "Research", "Publications", "Fieldwork", "Disclosure"],
-    dis1Title: "2MG YouTube Series",
-    dis1Text: `The 2 Minute Genera project (or Género en Dos Minutos) was originally conceived by the Ferns of Colombia project team leaders (Dr. Alejandra Vasco, Dr. Michael Sundue & Dr. Weston Testo) and carried out by myself and another graduate student on the project, Sarah K. Morris.
-
-This is a grassroots project with a twofold purpose: 1) to help students learn how to identify different genera of plants and 2) to help experts effectively disseminate information to the global audience. Scientific and taxonomic expertise has traditionally only been accessible to the lucky and the privileged who are able to attend higher education courses, but the Two Minute Genera project aims to break down some of those barriers by providing a framework for experts to relay their knowledge in an open-access platform (YouTube) available to anyone with an internet connection.
-
-My hope is that by making these videos simple and easy to create, we can encourage broader participation from the botanical community and amass videos for all ~17,000 genera of vascular plants. By working together and sharing our videos, we can help more people around the world learn to recognize and appreciate their local plants!`,
-    dis2Title: "Fiddlehead Forum",
-    dis2Text: `The Fiddlehead Forum is the newsletter of the American Fern Society. It features fern news, society announcements, and articles on the natural history of ferns and associated research.
-
-Ferns of Colombia project: memories of the second field expedition. 2024. Article for the Fiddlehead Forum. Bulletin of American Fern Society. Vol 50.
-
-Ferns of Colombia project: news from the field. 2023. Article for the Fiddlehead Forum. Bulletin of American Fern Society. Vol 49.
-
-I won the grant and I’m happily going to visit NYBG and BRIT in the USA!! Submitted. Article for the Fiddlehead Forum. Bulletin of American Fern Society.
-
-Ferns of Colombia project: relating the history from third expedition. Submitted. Article for the Fiddlehead Forum. Bulletin of American Fern Society.`
-  },
-  es: {
-    nav: ["Inicio", "CV", "Investigación", "Publicaciones", "Trabajo de campo", "Divulgación"],
-    dis1Title: "Serie 2MG en YouTube",
-    dis1Text: `El proyecto 2 Minute Genera (o Género en Dos Minutos) fue concebido originalmente por los líderes del proyecto Ferns of Colombia (Dr. Alejandra Vasco, Dr. Michael Sundue & Dr. Weston Testo) y llevado a cabo por mí y otra estudiante de posgrado del proyecto, Sarah K. Morris.
-
-Este es un proyecto de base con un doble propósito: 1) ayudar a los estudiantes a aprender a identificar diferentes géneros de plantas y 2) ayudar a los expertos a difundir información de manera efectiva al público global. La experiencia científica y taxonómica tradicionalmente solo ha sido accesible para los afortunados y privilegiados que pueden asistir a cursos de educación superior, pero el proyecto Two Minute Genera busca derribar algunas de esas barreras proporcionando un marco para que los expertos compartan su conocimiento en una plataforma de acceso abierto (YouTube) disponible para cualquiera con conexión a internet.
-
-Espero que al hacer estos videos simples y fáciles de crear, podamos fomentar una participación más amplia de la comunidad botánica y acumular videos para los ~17,000 géneros de plantas vasculares. Al trabajar juntos y compartir nuestros videos, podemos ayudar a más personas en todo el mundo a aprender a reconocer y apreciar sus plantas locales.`,
-    dis2Title: "Fiddlehead Forum",
-    dis2Text: `El Fiddlehead Forum es el boletín de la American Fern Society. Presenta noticias sobre helechos, anuncios de la sociedad y artículos sobre la historia natural de los helechos y la investigación asociada.
-
-Ferns of Colombia project: recuerdos de la segunda expedición de campo. 2024. Artículo para el Fiddlehead Forum. Bulletin of American Fern Society. Vol 50.
-
-Ferns of Colombia project: noticias desde el campo. 2023. Artículo para el Fiddlehead Forum. Bulletin of American Fern Society. Vol 49.
-
-¡Gané la beca y con alegría voy a visitar NYBG y BRIT en EE.UU.! Enviado. Artículo para el Fiddlehead Forum. Bulletin of American Fern Society.
-
-Ferns of Colombia project: relatando la historia de la tercera expedición. Enviado. Artículo para el Fiddlehead Forum. Bulletin of American Fern Society.`
-  }
-};
-
-function setLanguage(lang){
-  const navIds = ["nav-home","nav-cv","nav-research","nav-publications","nav-fieldwork","nav-disclosure"];
-  navIds.forEach((id,index)=> document.getElementById(id).textContent = content[lang].nav[index]);
-
-  document.getElementById("dis1-title").textContent = content[lang].dis1Title;
-  document.getElementById("dis1-text").textContent = content[lang].dis1Text;
-  document.getElementById("dis2-title").textContent = content[lang].dis2Title;
-  document.getElementById("dis2-text").textContent = content[lang].dis2Text;
-}
-
-// Default language
-setLanguage('en');
-</script>
 
 </body>
 </html>
