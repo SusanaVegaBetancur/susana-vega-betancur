@@ -1,62 +1,75 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Susana Vega Betancur - Publications</title>
+  <title>Publications - Susana Vega Betancur</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Susana Vega Betancur</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="field-work.html">Field Work</a></li>
-        <li><a href="disclosure.html">Disclosure</a></li>
-      </ul>
+
+<!-- Language buttons -->
+<div class="lang-buttons">
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('es')">Español</button>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <img src="images/main_image.jpg" alt="Main Image" class="main-image">
+  <div class="overlay">
+    <h1>SUSANA VEGA BETANCUR</h1>
+    <nav class="navbar">
+      <a href="home.html" id="nav-home">Home</a>
+      <a href="cv.html" id="nav-cv">CV</a>
+      <a href="research.html" id="nav-research">Research</a>
+      <a href="publications.html" id="nav-publications" class="active">Publications</a>
+      <a href="fieldwork.html" id="nav-fieldwork">Fieldwork</a>
+      <a href="disclosure.html" id="nav-disclosure">Disclosure</a>
     </nav>
-    <div style="margin-top:10px;">
-      <button onclick="changeLang('es')">Español</button>
-      <button onclick="changeLang('en')">English</button>
-    </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section id="publications">
-      <h2 class="es">Publicaciones</h2>
-      <h2 class="en" style="display:none;">Publications</h2>
+<!-- Publications content -->
+<section class="publications">
+  <h2 id="pub-section-title"></h2>
+  <ul>
+    <li>
+      Vega-Betancur, S., R. Callejas, W. Testo & A. Vasco. 2023. Sinopsis de Selaginella (Selaginellaceae) para Antioquia, Colombia. Brittonia. 
+      <a href="https://doi.org/10.1007/s12228-023-09744-0" target="_blank">https://doi.org/10.1007/s12228-023-09744-0</a>
+    </li>
+    <li>
+      Valdespino, I., Vega-Betancur S., C. López & J. Ceballos. 2024. Selaginella antioquensis (Selaginellaceae), a remarkable new species from Antioquia, Colombia. Brittonia. 
+      <a href="https://doi.org/10.1007/s12228-024-09813-y" target="_blank">https://doi.org/10.1007/s12228-024-09813-y</a>
+    </li>
+  </ul>
+</section>
 
-      <p class="es">
-        1. Vega Betancur, S., & Pérez, A. (2023). Título del artículo 1. <em>Revista Científica</em>, 12(3), 45-60.<br>
-        2. Vega Betancur, S., & Gómez, L. (2022). Título del artículo 2. <em>Otra Revista</em>, 8(1), 10-25.
-      </p>
-      <p class="en" style="display:none;">
-        1. Vega Betancur, S., & Pérez, A. (2023). Article Title 1. <em>Scientific Journal</em>, 12(3), 45-60.<br>
-        2. Vega Betancur, S., & Gómez, L. (2022). Article Title 2. <em>Another Journal</em>, 8(1), 10-25.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Susana Vega Betancur</p>
-  </footer>
-
-  <script>
-    function changeLang(lang) {
-      const esElements = document.querySelectorAll('.es');
-      const enElements = document.querySelectorAll('.en');
-      if(lang === 'es'){
-        esElements.forEach(el => el.style.display = '');
-        enElements.forEach(el => el.style.display = 'none');
-      } else {
-        esElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = '';
-      }
+<script>
+  const content = {
+    en: { 
+      nav: ["Home", "CV", "Research", "Publications", "Fieldwork", "Disclosure"],
+      pubSectionTitle: "Publications:"
+    },
+    es: { 
+      nav: ["Inicio", "CV", "Investigación", "Publicaciones", "Trabajo de campo", "Divulgación"],
+      pubSectionTitle: "Publicaciones:"
     }
-  </script>
+  };
+
+  function setLanguage(lang) {
+    // Update navbar
+    const navIds = ["nav-home", "nav-cv", "nav-research", "nav-publications", "nav-fieldwork", "nav-disclosure"];
+    navIds.forEach((id, index) => {
+      document.getElementById(id).textContent = content[lang].nav[index];
+    });
+
+    // Update section title
+    document.getElementById("pub-section-title").textContent = content[lang].pubSectionTitle;
+  }
+
+  // Default language
+  setLanguage('en');
+</script>
+
 </body>
 </html>
